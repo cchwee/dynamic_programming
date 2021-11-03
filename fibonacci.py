@@ -1,12 +1,12 @@
 # normal recursive version
 # Given a number n, print n-th Fibonacci Number. 
 
-def fibonacci(n:int):
+def fibonacci(n:int) -> int:
 
     '''
     Input:      n is a positive integer value. Any negative n value will be handled as an incorrect input.
     Output:     The ouput is an integer which is the nth Fibonacci number.
-    Complexity: The function is of exponential time, as a tree will be recursively created 
+    Complexity: The function is of exponential time O(2^n), as a tree will be recursively created 
                 each time n is called. The higher the n, the closer we get to a growth == golden ratio. 
     '''
     
@@ -31,7 +31,13 @@ def fibonacci(n:int):
 
 
 # dynamic prorgamming - top down approach
-def topdown_fibo(n):
+def topdown_fibo(n: int) -> int:
+    
+    '''
+    Input:      n is a positive integer value. Any negative n value will be handled as an incorrect input.
+    Output:     The ouput is an integer which is the nth Fibonacci number.
+    Complexity: The function is of linear time O(n), as a memo is created and all fib will only be computed once.
+    '''
 
     # handle base cases, O(1)
     if n < 0:
