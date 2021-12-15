@@ -1,6 +1,6 @@
-# Dynamic Programming - Game Master
+# Dynamic Programming 
 
-## Background info
+## Background info - Task 1: Game Master
 
 You are the game master for a table-top role-playing game that you and your friends are playing.
 
@@ -45,7 +45,7 @@ In the above example, the possible encounters are:
 - D is the value of target_difficulty
 - M is the length of monster_list
 
-
+## Background info - Task 2: Greenhouse
 
 #### Disclaimer
 - This is a school assignment question. 
