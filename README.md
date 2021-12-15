@@ -45,7 +45,63 @@ In the above example, the possible encounters are:
 - D is the value of target_difficulty
 - M is the length of monster_list
 
+ <br />
+ 
+---this is a seperation line---
+
+ <br />
+
+
 ## Background info - Task 2: Greenhouse
 
+You are a gardener in charge of a greenhouse. You are growing a variety of exotic plants as
+decoration for a party. You want to maximise the chance that all the plants are grown by the
+day of the party. In order to cause plants to grow more quickly, you can put sun lamps above
+the plants to give them more nutrients.
+
+You have calculated the probability that each plant will be ready on time, based on the number
+of lamps you assign to it. You cannot move the lamps around once you assign them to a plant.
+You want to maximise the chance that all the plants are fully grown by the day of the party.
+
+## Input
+**num_p** and **num_l **are positive integers representing the number of plants and lamps respectively.
+
+**probs** is a list of lists, where probs[i][j] represents the probability that plant i will be ready in time if it is allocated j lamps. Values in probs are floats between 0 and 1 inclusive.
+
+Plants do not always grow faster with more light, so it is possible for the probabilities to decrease as well as increase, as the number of lamps increases. In other words, the lists within probs may not be sorted ascending.
+
+## Output
+**best_lamp_allocation** returns an float, which is the highest probability of all plants being ready by the party that can be obtained by allocating lamps to plants optimally.
+
+## Example
+```
+probs = [[0.5, 0.5, 1],[0.25,0.1,0.75]]
+best_lamp_allocation(2,2,probs)
+>>> 0.375
+
+probs = [[0.5, 0.75, 0.25],[0.75,0.25,0.8]]
+print(best_lamp_allocation(2,2,probs))
+>>> 0.5625
+
+```
+- In the first example, we have 2 lamps to use. If we assign 0 lamps to plant 0, it has a 0.5
+probability of being ready. We would need to assign the full 2 lamps to it to improve its chance
+(to 1). We have 2 lamps left, so the best thing to do is assign both to plant 1, for a probability
+of 0.75. This gives an overall probability of 0.75*0.5=0.375.
+
+- In the second example, we again have 2 lamps and 2 plants, but with different probabilities. This time, the most
+efficient thing is to not use all the lamps! Giving 1 lamp to plant 0 and 0 lamps to plant 1 give
+a probability of 0.5625. It would be ideal to give 1 lamp to plant 0 and 2 lamps to plant 1, but
+we do not have 3 lamps so this is impossible.
+
+## Complexity
+**best_lamp_allocation** should run in O(P L^2) time and O(P L) space, where P is num_p, and L is num_l.
+
+ <br />
+ 
+ ---end of tasks---
+ 
+  <br />
+ 
 #### Disclaimer
 - This is a school assignment question. 
